@@ -1,26 +1,44 @@
 'use client'
 
-import * as React from 'react'
+import { motion } from 'framer-motion'
+import { cn } from '../utils'
+import { typography } from '../fonts'
 
 interface HeadlineProps {
   children: React.ReactNode
+  level?: 1 | 2 | 3
   className?: string
-  size?: 'sm' | 'md' | 'lg' | 'xl'
+  align?: 'left' | 'center'
 }
 
-const sizeClasses = {
-  sm: 'text-2xl md:text-3xl',
-  md: 'text-3xl md:text-4xl',
-  lg: 'text-4xl md:text-5xl',
-  xl: 'text-5xl md:text-6xl lg:text-7xl'
+const variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
 }
 
-export function Headline({ children, className = '', size = 'lg' }: HeadlineProps) {
+export const Headline = ({
+  children,
+  level = 1,
+  className,
+  align = 'left',
+}: HeadlineProps) => {
+  const Component = motion.h1
+  const baseClasses = typography[`h${level}` as keyof typeof typography]
+
   return (
-    <h1
-      className={`font-display leading-tight text-senClay dark:text-amber-500 ${sizeClasses[size]} ${className}`}
+    <Component
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={variants}
+      transition={{ duration: 0.6 }}
+      className={cn(
+        baseClasses,
+        align === 'center' && 'text-center',
+        className
+      )}
     >
       {children}
-    </h1>
+    </Component>
   )
 } 

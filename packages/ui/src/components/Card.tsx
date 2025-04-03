@@ -4,6 +4,7 @@ import * as React from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
+import { cn } from '../utils'
 
 interface CardProps {
   title: string
@@ -32,7 +33,10 @@ export function Card({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className={`group flex flex-col h-full overflow-hidden rounded-lg bg-white dark:bg-senMidnight shadow-lg hover:shadow-xl transition-shadow ${className}`}
+      className={cn(
+        'group flex flex-col h-full overflow-hidden rounded-lg bg-white dark:bg-senMidnight shadow-lg hover:shadow-xl transition-shadow',
+        className
+      )}
     >
       {image && (
         <div className="relative h-48 md:h-64 overflow-hidden">

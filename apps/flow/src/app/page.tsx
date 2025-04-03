@@ -2,7 +2,7 @@
 
 import * as React from 'react'
 import { motion } from 'framer-motion'
-import { Headline } from '@sen/ui'
+import { Headline, Section, Card, typography, cn } from '@sen/ui'
 import { coreValues } from '../content/flow/core-values'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -91,109 +91,116 @@ function MediaObject({ image, title, content, link, imageOnRight = false }: Medi
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
+    <>
+      <Section background="bg-gray-900" className="text-white">
+        <div className="col-span-12 md:col-span-6 lg:col-span-5">
+          <Headline level={1} className="text-white mb-6">
+            Digital Innovation Studio
+          </Headline>
+          <p className={cn(typography.body, "text-white/80 mb-8")}>
+            We help businesses transform through digital innovation, combining strategy, design, and technology.
+          </p>
+          <Link 
+            href="/contact" 
+            className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-sm text-gray-900 bg-white hover:bg-gray-100 transition-all"
+          >
+            Get in touch
+          </Link>
+        </div>
+        <div className="col-span-12 md:col-span-6 lg:col-span-7 relative h-[400px] md:h-[500px]">
           <Image
             src="/images/hero-bg.jpg"
-            alt="Hero background"
+            alt="Digital Innovation"
             fill
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-senMidnight/60" />
         </div>
-        <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
-          <h1 className="text-5xl md:text-7xl font-display mb-6">
-            Creating Digital Experiences That Matter
-          </h1>
-          <p className="text-xl md:text-2xl mb-8">
-            We combine technology, design, and strategy to build remarkable products
+      </Section>
+
+      <Section>
+        <div className="col-span-12 text-center mb-12">
+          <Headline level={2}>Our Services</Headline>
+          <p className={cn(typography.body, "max-w-2xl mx-auto")}>
+            We offer a comprehensive range of digital services to help your business grow.
           </p>
-          <Link
-            href="/contact"
-            className="inline-block bg-senClay hover:bg-senSkin text-white hover:text-senMidnight px-8 py-4 rounded-lg text-lg transition-colors"
-          >
-            Start Your Project
-          </Link>
         </div>
-      </section>
+        
+        <Card
+          title="Strategy"
+          description="We develop comprehensive digital strategies that align with your business goals."
+          image={{
+            src: "/images/strategy.jpg",
+            alt: "Strategy"
+          }}
+          link={{
+            href: "/services/strategy",
+            label: "Learn more"
+          }}
+        />
+        
+        <Card
+          title="Design"
+          description="We create beautiful, functional designs that enhance user experience."
+          image={{
+            src: "/images/design.jpg",
+            alt: "Design"
+          }}
+          link={{
+            href: "/services/design",
+            label: "Learn more"
+          }}
+        />
+        
+        <Card
+          title="Development"
+          description="We build robust, scalable applications using cutting-edge technologies."
+          image={{
+            src: "/images/development.jpg",
+            alt: "Development"
+          }}
+          link={{
+            href: "/services/development",
+            label: "Learn more"
+          }}
+        />
+      </Section>
 
-      {/* Services Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-display text-senMidnight text-center mb-16">Our Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {services.map((service) => (
-              <div key={service.title} className="text-center">
-                <div className="relative w-20 h-20 mx-auto mb-6">
-                  <Image
-                    src={service.icon}
-                    alt={service.title}
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-                <h3 className="text-2xl font-display text-senDeepBlue mb-4">{service.title}</h3>
-                <p className="text-senSlate">{service.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Projects */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-display text-senMidnight text-center mb-16">Featured Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {projects.map((project) => (
-              <div key={project.title} className="group relative overflow-hidden rounded-lg">
-                <div className="relative aspect-[16/9]">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover transition-transform group-hover:scale-105"
-                  />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-senMidnight/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <h3 className="text-2xl font-display text-white mb-2">{project.title}</h3>
-                    <p className="text-gray-200">{project.description}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <Link
-              href="/projects"
-              className="inline-block border-2 border-senDeepBlue text-senDeepBlue hover:bg-senDeepBlue hover:text-white px-8 py-3 rounded-lg transition-colors"
-            >
-              View All Projects
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="py-20 bg-senMidnight text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-display mb-6">Ready to Start Your Project?</h2>
-          <p className="text-xl mb-8 text-gray-300">
-            Let's create something amazing together
+      <Section background="bg-gray-50" borderTop>
+        <div className="col-span-12 text-center mb-12">
+          <Headline level={2}>Featured Projects</Headline>
+          <p className={cn(typography.body, "max-w-2xl mx-auto")}>
+            Explore some of our recent work and see how we've helped businesses transform.
           </p>
-          <Link
-            href="/contact"
-            className="inline-block bg-senClay hover:bg-senSkin text-white hover:text-senMidnight px-8 py-4 rounded-lg text-lg transition-colors"
-          >
-            Get in Touch
-          </Link>
         </div>
-      </section>
-    </div>
+        
+        <Card
+          title="E-commerce Platform"
+          description="A modern e-commerce platform with advanced features and seamless user experience."
+          image={{
+            src: "/images/project1.jpg",
+            alt: "E-commerce Platform"
+          }}
+          link={{
+            href: "/projects/ecommerce",
+            label: "View case study"
+          }}
+        />
+        
+        <Card
+          title="Mobile App"
+          description="A cross-platform mobile application with real-time features and offline capabilities."
+          image={{
+            src: "/images/project2.jpg",
+            alt: "Mobile App"
+          }}
+          link={{
+            href: "/projects/mobile-app",
+            label: "View case study"
+          }}
+        />
+      </Section>
+    </>
   )
 }
 

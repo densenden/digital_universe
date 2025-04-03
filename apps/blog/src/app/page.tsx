@@ -2,8 +2,9 @@
 
 import * as React from 'react'
 import { motion } from 'framer-motion'
-import { Headline } from '@sen/ui'
+import { Headline, Section, Card, typography, cn } from '@sen/ui'
 import { posts } from '../content/blog/posts'
+import Link from 'next/link'
 
 interface PostPreviewProps {
   title: string
@@ -46,51 +47,97 @@ function PostPreview({ title, excerpt, date, tag, slug }: PostPreviewProps) {
   )
 }
 
-export default function BlogPage() {
+export default function Home() {
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative py-20 bg-senMidnight text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-5xl md:text-6xl font-display mb-6">SEN.CO Blog</h1>
-          <p className="text-xl text-gray-300 max-w-2xl">
-            Insights, Stories, and Perspectives on Digital Innovation
+    <>
+      <Section>
+        <div className="col-span-12 text-center mb-12">
+          <Headline level={1}>Studio SEN Blog</Headline>
+          <p className={cn(typography.body, "max-w-2xl mx-auto")}>
+            Insights, stories, and perspectives on digital innovation, design, and technology.
           </p>
         </div>
-      </section>
+      </Section>
 
-      {/* Featured Posts */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-display text-senDeepBlue mb-12">Latest Articles</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {posts.map((post) => (
-              <article key={post.slug} className="bg-white rounded-lg shadow-lg overflow-hidden">
-                <div className="p-6">
-                  <span className="inline-block px-3 py-1 text-sm font-medium rounded-full bg-senDeepBlue/10 text-senDeepBlue mb-4">
-                    {post.tag}
-                  </span>
-                  <h3 className="text-2xl font-display text-senDeepBlue mb-4">
-                    <a href={`/posts/${post.slug}`} className="hover:text-senMidnight">
-                      {post.title}
-                    </a>
-                  </h3>
-                  <p className="text-senSlate mb-4">{post.excerpt}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-500">{post.date}</span>
-                    <a
-                      href={`/posts/${post.slug}`}
-                      className="text-senDeepBlue hover:text-senMidnight font-medium"
-                    >
-                      Read more →
-                    </a>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
+      <Section background="bg-gray-50" borderTop>
+        <div className="col-span-12 mb-12">
+          <Headline level={2}>Latest Articles</Headline>
         </div>
-      </section>
-    </div>
+        
+        <Card
+          title="The Future of Digital Innovation"
+          description="Exploring emerging trends and technologies that are shaping the future of digital innovation."
+          image={{
+            src: "/images/blog/future-innovation.jpg",
+            alt: "Future of Digital Innovation"
+          }}
+          link={{
+            href: "/articles/future-of-digital-innovation",
+            label: "Read more"
+          }}
+        />
+        
+        <Card
+          title="Design Systems in Practice"
+          description="A practical guide to implementing and maintaining effective design systems in modern applications."
+          image={{
+            src: "/images/blog/design-systems.jpg",
+            alt: "Design Systems"
+          }}
+          link={{
+            href: "/articles/design-systems",
+            label: "Read more"
+          }}
+        />
+        
+        <Card
+          title="Sustainable Technology"
+          description="How sustainable practices are becoming essential in technology development and deployment."
+          image={{
+            src: "/images/blog/sustainable-tech.jpg",
+            alt: "Sustainable Technology"
+          }}
+          link={{
+            href: "/articles/sustainable-technology",
+            label: "Read more"
+          }}
+        />
+      </Section>
+
+      <Section>
+        <div className="col-span-12 text-center mb-12">
+          <Headline level={2}>Featured Topics</Headline>
+          <p className={cn(typography.body, "max-w-2xl mx-auto")}>
+            Explore our most popular topics and discover insights across different areas of digital innovation.
+          </p>
+        </div>
+        
+        <div className="col-span-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <Link 
+            href="/tags/design" 
+            className="group p-6 bg-white ring-1 ring-neutral-200/30 hover:ring-neutral-300/50 transition-all"
+          >
+            <h3 className={cn(typography.h3, "mb-4 group-hover:text-neutral-600")}>Design</h3>
+            <p className={typography.small}>UI/UX, Design Systems, Visual Design</p>
+          </Link>
+          
+          <Link 
+            href="/tags/development" 
+            className="group p-6 bg-white ring-1 ring-neutral-200/30 hover:ring-neutral-300/50 transition-all"
+          >
+            <h3 className={cn(typography.h3, "mb-4 group-hover:text-neutral-600")}>Development</h3>
+            <p className={typography.small}>Web Development, Mobile Apps, Architecture</p>
+          </Link>
+          
+          <Link 
+            href="/tags/strategy" 
+            className="group p-6 bg-white ring-1 ring-neutral-200/30 hover:ring-neutral-300/50 transition-all"
+          >
+            <h3 className={cn(typography.h3, "mb-4 group-hover:text-neutral-600")}>Strategy</h3>
+            <p className={typography.small}>Digital Strategy, Innovation, Business Growth</p>
+          </Link>
+        </div>
+      </Section>
+    </>
   )
 } 
