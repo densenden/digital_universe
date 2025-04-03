@@ -3,17 +3,19 @@
 import * as React from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import { cn } from '../utils'
 
 interface MenuProps {
   items: Array<{
     label: string
     href: string
   }>
+  className?: string
 }
 
-export const Menu = ({ items }: MenuProps) => {
+export const Menu = ({ items, className }: MenuProps) => {
   return (
-    <nav className="py-8">
+    <nav>
       <ul className="flex space-x-8">
         {items.map((item, index) => (
           <motion.li
@@ -24,7 +26,10 @@ export const Menu = ({ items }: MenuProps) => {
           >
             <Link
               href={item.href}
-              className="text-senSkin hover:text-senClay transition-colors duration-200"
+              className={cn(
+                "text-white hover:text-gray-300 transition-colors duration-200 uppercase text-sm font-medium tracking-wider",
+                className
+              )}
             >
               {item.label}
             </Link>

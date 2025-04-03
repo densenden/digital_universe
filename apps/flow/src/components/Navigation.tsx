@@ -1,31 +1,51 @@
+'use client'
+
 import Link from 'next/link'
 import { Menu } from '@sen/ui'
 
 const menuItems = [
-  { label: 'Home', href: '/' },
   { label: 'Services', href: '/services' },
   { label: 'Projects', href: '/projects' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
 ]
 
-const Navigation = () => {
+function Logo({ className = '' }: { className?: string }) {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent">
+    <div className={`relative ${className}`}>
+      <div className="absolute inset-0 animate-pulse bg-gradient-to-r from-amber-500/20 to-amber-500/0 rounded-full" />
+      <svg
+        className="relative z-10 w-10 h-10 text-white"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 521.6 517.4"
+      >
+        <path
+          fill="currentColor"
+          d="M286.3,455.7h-.6c-2.4-.3-4.2-2.4-4.2-4.8v-139.7c0-1.8,1.1-3.6,2.7-4.4.7-.3,1.4-.5,2.2-.5,1.1,0,2.1.3,3,1l108.2,82.1,6.1-7.1c6.8-7.8,13-16.3,18.4-25.2l4.7-7.7-50.2-38.1c-1.4-1.1-1.8-2.5-1.9-3.2s-.1-2.2.9-3.6c.9-1.2,2.4-1.9,3.9-1.9s1.9.2,2.9,1l49,37.2,4.9-12.2c6.9-17.3,11.1-35.5,12.7-54.1l.9-10.8H71.7l.9,10.8c1.5,18.6,5.8,36.8,12.7,54.1l4.9,12.2,49-37.2c1.1-.8,2.2-1,2.9-1,1.5,0,3,.7,3.9,1.9,1.1,1.4,1.1,2.9,1,3.6s-.5,2.2-1.9,3.2l-50.2,38.1,4.7,7.7c5.4,8.9,11.6,17.3,18.4,25.2l6.1,7.1,108.2-82.1c.9-.6,1.9-1,3-1s1.5.2,2.2.5c1.7.8,2.7,2.5,2.7,4.4v139.7c0,2.4-1.8,4.5-4.3,4.8h-1.2c-42.9-5.7-83.5-25.7-114.2-56.3l-.3-.3c-2.8-2.8-5.6-5.8-8.3-8.9-32-36.3-49.7-82.9-49.7-131.4h0c0-48.6,17.7-95.3,49.7-131.6,2.8-3.1,5.6-6.1,8.3-8.9l.3-.3c30.7-30.6,71.2-50.6,114.1-56.3h1.2c2.5.3,4.3,2.4,4.3,4.8v139.7c0,1.8-1.1,3.6-2.7,4.4-.7.3-1.4.5-2.2.5-1.1,0-2.1-.3-3-1l-108.2-82.1-6.1,7.1c-6.8,7.8-13,16.3-18.4,25.2l-4.7,7.7,50.2,38.1c2.1,1.6,2.6,4.7.9,6.8-.9,1.2-2.4,1.9-3.9,1.9s-1.9-.2-2.9-1l-49-37.2-4.9,12.2c-6.9,17.3-11.1,35.5-12.7,54.1l-.9,10.8h378.3l-.9-10.8c-1.5-18.6-5.8-36.8-12.7-54.1l-4.9-12.2-49,37.2c-1.1.8-2.2,1-2.9,1-1.5,0-3-.7-3.9-1.9-1.6-2.1-1.2-5.2.9-6.8l50.2-38.1-4.7-7.7c-5.4-8.9-11.6-17.3-18.4-25.2l-6.1-7.1-108.2,82.1c-.9.6-1.9,1-3,1s-1.5-.2-2.2-.5c-1.7-.8-2.7-2.5-2.7-4.4V66.6c0-2.4,1.8-4.5,4.2-4.8h1.3c42.8,5.6,83.4,25.6,114.1,56.3l.3.3c2.8,2.8,5.6,5.8,8.3,8.9,32,36.3,49.7,82.9,49.7,131.4s-17.7,95.3-49.7,131.6c-2.7,3-5.5,6-8.3,8.9l-.3.3c-30.7,30.7-71.3,50.7-114.1,56.3h-.6v-.1ZM291.2,445.6l12.3-2.8c28.2-6.5,55-19.8,77.4-38.3l9.8-8-99.4-75.5v124.6h-.1ZM214.3,333.2l-83.4,63.3,9.8,8c22.4,18.5,49.2,31.7,77.4,38.3l12.3,2.8v-124.6l-16,12.2h-.1ZM291.2,196.5l99.4-75.5-9.8-8c-22.4-18.5-49.2-31.7-77.4-38.3l-12.3-2.8v124.6h.1ZM218.1,74.7c-28.2,6.5-55,19.8-77.4,38.3l-9.8,8,99.4,75.5v-124.6l-12.3,2.8h.1Z"
+        />
+      </svg>
+    </div>
+  )
+}
+
+export const Navigation = () => {
+  return (
+    <nav className="fixed w-full bg-gray-900 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex">
-            <Link href="/" className="flex items-center">
-              <span className="text-2xl font-bodoni text-white">SEN.CO</span>
+        <div className="flex justify-between items-center h-16">
+          <div className="flex items-center space-x-4">
+            <Link href="/" className="flex-shrink-0">
+              <Logo className="h-8 w-auto" />
+            </Link>
+            <Link href="/" className="text-white font-bodoni text-2xl tracking-wide">
+              sen.co
             </Link>
           </div>
-          <div className="hidden md:flex items-center">
+          <div className="flex items-center">
             <Menu items={menuItems} />
           </div>
         </div>
       </div>
     </nav>
   )
-}
-
-export default Navigation 
+} 

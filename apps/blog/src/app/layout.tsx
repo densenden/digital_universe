@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import { Rubik, Bodoni_Moda } from 'next/font/google'
 import './globals.css'
-import { Layout } from '@sen/ui'
+import { Navigation } from '../components/Navigation'
+import { Footer } from '@sen/ui'
 
 const rubik = Rubik({
   subsets: ['latin'],
@@ -17,22 +18,9 @@ const bodoni = Bodoni_Moda({
 })
 
 export const metadata: Metadata = {
-  title: 'SEN.CO Blog - Digital Innovation',
+  title: 'Studio SEN Blog - Digital Innovation Insights',
   description: 'Insights, Stories, and Perspectives on Digital Innovation',
 }
-
-const menuItems = [
-  { label: 'Home', href: '/' },
-  { label: 'Articles', href: '/articles' },
-  { label: 'Tags', href: '/tags' },
-  { label: 'About', href: '/about' },
-]
-
-const domains = [
-  { name: 'SEN.STUDIO', href: 'https://sen.studio', isActive: false },
-  { name: 'FLOW', href: 'https://flow.sen.studio', isActive: false },
-  { name: 'BLOG', href: 'https://blog.sen.studio', isActive: true },
-]
 
 export default function RootLayout({
   children,
@@ -41,10 +29,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${rubik.variable} ${bodoni.variable}`}>
-      <body className="font-sans bg-gray-50">
-        <Layout menuItems={menuItems} domains={domains}>
+      <body className="min-h-screen bg-gray-50">
+        <Navigation />
+        <main className="py-16">
           {children}
-        </Layout>
+        </main>
+        <Footer />
       </body>
     </html>
   )

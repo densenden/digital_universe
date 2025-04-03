@@ -11,7 +11,7 @@ export function Logo({ className = '' }: LogoProps) {
     <div className={`relative ${className}`}>
       <div className="absolute inset-0 animate-pulse bg-gradient-to-r from-amber-500/20 to-amber-500/0 rounded-full" />
       <svg
-        className="relative z-10 w-10 h-10"
+        className="relative z-10 w-10 h-10 text-white"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 521.6 517.4"
       >
