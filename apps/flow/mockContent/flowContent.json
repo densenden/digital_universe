@@ -1,0 +1,98 @@
+{
+  "hero": {
+    "title": "Digitale Produkte mit Seele",
+    "subtitle": "Wir entwickeln innovative Lösungen, die Menschen begeistern und Unternehmen voranbringen.",
+    "image": {
+      "src": "/images/hero.jpg",
+      "alt": "Digital Innovation"
+    }
+  },
+  "features": [
+    {
+      "title": "Design",
+      "description": "Wir gestalten intuitive und ästhetische Benutzeroberflächen, die Ihre Marke perfekt repräsentieren.",
+      "image": {
+        "src": "/images/design.jpg",
+        "alt": "Design Process"
+      },
+      "link": {
+        "href": "/services/design",
+        "label": "Mehr über Design"
+      }
+    },
+    {
+      "title": "Entwicklung",
+      "description": "Mit modernsten Technologien entwickeln wir skalierbare und zukunftssichere Anwendungen.",
+      "image": {
+        "src": "/images/development.jpg",
+        "alt": "Development Process"
+      },
+      "link": {
+        "href": "/services/development",
+        "label": "Mehr über Entwicklung"
+      }
+    },
+    {
+      "title": "Strategie",
+      "description": "Wir helfen Ihnen, die richtigen Entscheidungen für Ihre digitale Zukunft zu treffen.",
+      "image": {
+        "src": "/images/strategy.jpg",
+        "alt": "Strategy Session"
+      },
+      "link": {
+        "href": "/services/strategy",
+        "label": "Mehr über Strategie"
+      }
+    }
+  ],
+  "quote": {
+    "text": "Innovation ist nicht nur Technologie, sondern die Kunst, Menschen durch digitale Erlebnisse zu berühren.",
+    "author": "Dennis Senner",
+    "role": "Gründer & Creative Director"
+  },
+  "textBlocks": [
+    {
+      "title": "Unsere Vision",
+      "content": "Wir glauben an die Kraft der digitalen Transformation. In einer Welt, die sich ständig verändert, schaffen wir Lösungen, die Menschen verbinden und Unternehmen neue Möglichkeiten eröffnen.\n\nUnser Ziel ist es, durch innovative Technologien und kreatives Design nachhaltige Werte zu schaffen. Wir setzen auf langfristige Partnerschaften und entwickeln Produkte, die nicht nur funktionieren, sondern begeistern."
+    },
+    {
+      "title": "Unser Ansatz",
+      "content": "Jedes Projekt beginnt mit dem Menschen. Wir hören zu, verstehen die Bedürfnisse und entwickeln maßgeschneiderte Lösungen, die genau diese Bedürfnisse erfüllen.\n\nDurch agile Methoden und kontinuierliches Feedback stellen wir sicher, dass unsere Lösungen nicht nur technisch exzellent sind, sondern auch einen echten Mehrwert bieten."
+    }
+  ],
+  "mediaObjects": [
+    {
+      "title": "Design Thinking",
+      "content": "Unser Design-Thinking-Prozess stellt den Menschen in den Mittelpunkt. Wir kombinieren Empathie mit Innovation, um Lösungen zu entwickeln, die nicht nur funktional sind, sondern auch Freude bereiten.\n\nDurch iteratives Prototyping und kontinuierliches Nutzerfeedback verfeinern wir unsere Designs, bis sie perfekt sind.",
+      "image": {
+        "src": "/images/design-thinking.jpg",
+        "alt": "Design Thinking Process"
+      },
+      "link": {
+        "href": "/process",
+        "label": "Unseren Prozess kennenlernen"
+      }
+    },
+    {
+      "title": "Technologie & Innovation",
+      "content": "Mit einem tiefen Verständnis für moderne Technologien entwickeln wir zukunftssichere Lösungen. Von Progressive Web Apps bis zu komplexen Systemarchitekturen – wir finden den optimalen Tech-Stack für Ihre Anforderungen.\n\nUnsere Entwickler arbeiten mit den neuesten Frameworks und Best Practices, um hochperformante und wartbare Anwendungen zu erstellen.",
+      "image": {
+        "src": "/images/technology.jpg",
+        "alt": "Technology Innovation"
+      },
+      "imageOnRight": true,
+      "link": {
+        "href": "/technology",
+        "label": "Unsere Technologien"
+      }
+    }
+  ],
+  "cta": {
+    "title": "Bereit für den nächsten Schritt?",
+    "content": "Lassen Sie uns gemeinsam Ihr digitales Projekt zum Erfolg führen. Wir freuen uns darauf, Sie kennenzulernen und Ihre Vision zu verstehen.",
+    "link": {
+      "href": "/contact",
+      "label": "Projekt starten"
+    }
+  }
+} 
