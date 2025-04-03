@@ -3,7 +3,6 @@
 import Link from 'next/link'
 import { Menu } from '../Menu'
 import { Logo } from '../Logo'
-import { cn } from '../../utils'
 
 interface NavigationProps {
   title: string
@@ -13,22 +12,20 @@ interface NavigationProps {
   }>
 }
 
-export const Navigation = ({ title, menuItems }: NavigationProps) => {
+export function Navigation({ title, menuItems }: NavigationProps) {
   return (
-    <nav className="fixed w-full bg-gray-900 z-50">
+    <nav className="w-full bg-white dark:bg-senMidnight">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-4">
-            <Link href="/" className="flex-shrink-0">
-              <Logo className="h-8 w-auto" />
-            </Link>
-            <Link href="/" className="text-white font-bodoni text-2xl tracking-wide">
-              {title}
+            <Link href="/" className="flex items-center space-x-2">
+              <Logo className="w-8 h-8" />
+              <span className="font-display text-xl text-senClay dark:text-amber-500">
+                {title}
+              </span>
             </Link>
           </div>
-          <div className="flex items-center">
-            <Menu items={menuItems} />
-          </div>
+          <Menu items={menuItems} />
         </div>
       </div>
     </nav>

@@ -15,11 +15,12 @@ const bodoni = Bodoni_Moda({
   variable: '--font-bodoni',
   display: 'swap',
   weight: ['400', '500', '600', '700'],
+  style: ['normal', 'italic'],
 })
 
 export const metadata: Metadata = {
-  title: 'Studio SEN Blog - Digital Innovation Insights',
-  description: 'Insights, Stories, and Perspectives on Digital Innovation',
+  title: 'SEN.CO Blog - Digital Innovation Studio',
+  description: 'Insights and stories about digital innovation',
 }
 
 export default function RootLayout({
@@ -29,11 +30,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${rubik.variable} ${bodoni.variable}`}>
-      <body className="min-h-screen bg-gray-50">
+      <body className="bg-white dark:bg-senMidnight">
         <Navigation />
-        <main className="py-16">
-          {children}
-        </main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

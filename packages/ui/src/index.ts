@@ -1,7 +1,7 @@
 export { Section } from './components/Section'
 export { Card } from './components/Card'
 export { Headline } from './components/Headline'
-export { Navigation } from './components/Navigation/index'
+export { Navigation } from './components/Navigation'
 export { Footer } from './components/Footer'
 export { Menu } from './components/Menu'
 export { Logo } from './components/Logo'

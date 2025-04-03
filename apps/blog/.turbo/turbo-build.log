@@ -1,0 +1,257 @@
+
+> @sen/blog@0.1.0 build /Users/densen/sen_dev/digital_universe/apps/blog
+> next build
+
+  [1m[38;2;173;127;168m ▲ Next.js 14.1.0[39m[22m
+
+ [37m[1m [22m[39m Creating an optimized production build ...
+ ⨯ Failed to find font override values for font `Bodoni Moda`
+ ⨯ Failed to find font override values for font `Bodoni Moda`
+ ⚠ Compiled with warnings
+
+./src/app/page.tsx
+Attempted import error: 'Section' is not exported from '@sen/ui' (imported as 'Section').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/page.tsx
+Attempted import error: 'cn' is not exported from '@sen/ui' (imported as 'cn').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/page.tsx
+Attempted import error: 'typography' is not exported from '@sen/ui' (imported as 'typography').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/page.tsx
+Attempted import error: 'Section' is not exported from '@sen/ui' (imported as 'Section').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/page.tsx
+Attempted import error: 'Card' is not exported from '@sen/ui' (imported as 'Card').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/page.tsx
+Attempted import error: 'Card' is not exported from '@sen/ui' (imported as 'Card').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/page.tsx
+Attempted import error: 'Card' is not exported from '@sen/ui' (imported as 'Card').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/page.tsx
+Attempted import error: 'Section' is not exported from '@sen/ui' (imported as 'Section').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/page.tsx
+Attempted import error: 'cn' is not exported from '@sen/ui' (imported as 'cn').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/page.tsx
+Attempted import error: 'typography' is not exported from '@sen/ui' (imported as 'typography').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/page.tsx
+Attempted import error: 'cn' is not exported from '@sen/ui' (imported as 'cn').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/page.tsx
+Attempted import error: 'typography' is not exported from '@sen/ui' (imported as 'typography').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/page.tsx
+Attempted import error: 'typography' is not exported from '@sen/ui' (imported as 'typography').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/page.tsx
+Attempted import error: 'cn' is not exported from '@sen/ui' (imported as 'cn').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/page.tsx
+Attempted import error: 'typography' is not exported from '@sen/ui' (imported as 'typography').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/page.tsx
+Attempted import error: 'typography' is not exported from '@sen/ui' (imported as 'typography').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/page.tsx
+Attempted import error: 'cn' is not exported from '@sen/ui' (imported as 'cn').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/page.tsx
+Attempted import error: 'typography' is not exported from '@sen/ui' (imported as 'typography').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/page.tsx
+Attempted import error: 'typography' is not exported from '@sen/ui' (imported as 'typography').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/components/Navigation.tsx
+Attempted import error: 'Navigation' is not exported from '@sen/ui' (imported as 'UINavigation').
+
+Import trace for requested module:
+./src/components/Navigation.tsx
+
+ ⨯ Failed to find font override values for font `Bodoni Moda`
+ ⨯ Failed to find font override values for font `Bodoni Moda`
+ ⚠ Compiled with warnings
+
+./src/app/page.tsx
+Attempted import error: 'Section' is not exported from '@sen/ui' (imported as 'Section').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/page.tsx
+Attempted import error: 'cn' is not exported from '@sen/ui' (imported as 'cn').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/page.tsx
+Attempted import error: 'typography' is not exported from '@sen/ui' (imported as 'typography').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/page.tsx
+Attempted import error: 'Section' is not exported from '@sen/ui' (imported as 'Section').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/page.tsx
+Attempted import error: 'Card' is not exported from '@sen/ui' (imported as 'Card').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/page.tsx
+Attempted import error: 'Card' is not exported from '@sen/ui' (imported as 'Card').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/page.tsx
+Attempted import error: 'Card' is not exported from '@sen/ui' (imported as 'Card').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/page.tsx
+Attempted import error: 'Section' is not exported from '@sen/ui' (imported as 'Section').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/page.tsx
+Attempted import error: 'cn' is not exported from '@sen/ui' (imported as 'cn').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/page.tsx
+Attempted import error: 'typography' is not exported from '@sen/ui' (imported as 'typography').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/page.tsx
+Attempted import error: 'cn' is not exported from '@sen/ui' (imported as 'cn').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/page.tsx
+Attempted import error: 'typography' is not exported from '@sen/ui' (imported as 'typography').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/page.tsx
+Attempted import error: 'typography' is not exported from '@sen/ui' (imported as 'typography').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/page.tsx
+Attempted import error: 'cn' is not exported from '@sen/ui' (imported as 'cn').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/page.tsx
+Attempted import error: 'typography' is not exported from '@sen/ui' (imported as 'typography').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/page.tsx
+Attempted import error: 'typography' is not exported from '@sen/ui' (imported as 'typography').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/page.tsx
+Attempted import error: 'cn' is not exported from '@sen/ui' (imported as 'cn').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/page.tsx
+Attempted import error: 'typography' is not exported from '@sen/ui' (imported as 'typography').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/app/page.tsx
+Attempted import error: 'typography' is not exported from '@sen/ui' (imported as 'typography').
+
+Import trace for requested module:
+./src/app/page.tsx
+
+./src/components/Navigation.tsx
+Attempted import error: 'Navigation' is not exported from '@sen/ui' (imported as 'UINavigation').
+
+Import trace for requested module:
+./src/components/Navigation.tsx
+
+ [32m[1m✓[22m[39m Compiled successfully
+[?25l [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m..[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m...[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m.[39m[2K[1G [37m[1m [22m[39m Linting and checking validity of types  [36m..[39m[?25h

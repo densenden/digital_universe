@@ -62,29 +62,28 @@ function MediaObject({ image, title, content, link, imageOnRight = false }: Medi
       transition={{ duration: 0.6 }}
       className="relative h-64 md:h-full min-h-[400px]"
     >
-      <img
+      <Image
         src={image.src}
         alt={image.alt}
-        className="w-full h-full object-cover rounded-lg"
+        fill
+        className="object-cover rounded-lg"
       />
     </motion.div>
   )
 
   return (
-    <div className="container mx-auto px-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-        {imageOnRight ? (
-          <>
-            <div className="md:pr-8">{contentSection}</div>
-            {imageSection}
-          </>
-        ) : (
-          <>
-            {imageSection}
-            <div className="md:pl-8">{contentSection}</div>
-          </>
-        )}
-      </div>
+    <div className={`grid grid-cols-1 md:grid-cols-2 gap-8 ${imageOnRight ? 'md:grid-flow-col-dense' : ''}`}>
+      {imageOnRight ? (
+        <>
+          {contentSection}
+          {imageSection}
+        </>
+      ) : (
+        <>
+          {imageSection}
+          {contentSection}
+        </>
+      )}
     </div>
   )
 }

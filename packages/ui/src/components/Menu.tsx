@@ -1,23 +1,24 @@
 'use client'
 
 import Link from 'next/link'
-import { cn } from '../utils'
 
-interface MenuProps {
-  items: Array<{
-    label: string
-    href: string
-  }>
+interface MenuItem {
+  label: string
+  href: string
 }
 
-export const Menu = ({ items }: MenuProps) => {
+interface MenuProps {
+  items: MenuItem[]
+}
+
+export function Menu({ items }: MenuProps) {
   return (
-    <div className="hidden md:flex items-center space-x-8">
+    <div className="flex gap-8">
       {items.map((item) => (
         <Link
           key={item.href}
           href={item.href}
-          className="text-white/80 hover:text-white font-rubik text-sm tracking-wide transition-colors"
+          className="text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
         >
           {item.label}
         </Link>
