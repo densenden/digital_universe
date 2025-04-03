@@ -534,3 +534,9 @@
 2025-04-03T20:35:20.735181Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@sen/blog"), path: AnchoredSystemPathBuf("apps/blog") }}))
 2025-04-03T20:35:28.133716Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/flow/src/app/layout.tsx")}
 2025-04-03T20:35:28.134383Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@sen/flow"), path: AnchoredSystemPathBuf("apps/flow") }}))
+2025-04-03T20:36:53.136766Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/flow/public/images/u9967959759_youtube_thumbnail_aerial_photography_of_urban_lands_a29c3ab3-d425-4419-ad1a-30079f9c43fa.jpg")}
+2025-04-03T20:36:53.137527Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@sen/flow"), path: AnchoredSystemPathBuf("apps/flow") }}))
+2025-04-03T20:37:04.228595Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/flow/public/images/digital_marketing.jpg"), AnchoredSystemPathBuf("apps/flow/public/images/u9967959759_youtube_thumbnail_aerial_photography_of_urban_lands_a29c3ab3-d425-4419-ad1a-30079f9c43fa.jpg")}
+2025-04-03T20:37:04.228618Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@sen/flow"), path: AnchoredSystemPathBuf("apps/flow") }}))
+2025-04-03T20:37:36.934191Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("apps/flow/public/images/marketing.jpg"), AnchoredSystemPathBuf("apps/flow/public/images/digital_marketing.jpg")}
+2025-04-03T20:37:36.934702Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@sen/flow"), path: AnchoredSystemPathBuf("apps/flow") }}))
