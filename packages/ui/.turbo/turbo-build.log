@@ -1,0 +1,22 @@
+
+> @digital-universe/ui@0.1.0 build /Users/densen/sen_dev/digital_universe/packages/ui
+> tsup src/index.ts --format esm,cjs --dts --external react
+
+[34mCLI[39m Building entry: src/index.ts
+[34mCLI[39m Using tsconfig: tsconfig.json
+[34mCLI[39m tsup v8.4.0
+[34mCLI[39m Using tsup config: /Users/densen/sen_dev/digital_universe/packages/ui/tsup.config.ts
+[34mCLI[39m Target: es5
+[34mCLI[39m Cleaning output folder
+[34mESM[39m Build start
+[34mCJS[39m Build start
+DTS Build start
+[32mCJS[39m [1mdist/index.js     [22m[32m8.16 KB[39m
+[32mCJS[39m [1mdist/index.js.map [22m[32m11.18 KB[39m
+[32mCJS[39m ⚡️ Build success in 200ms
+[32mESM[39m [1mdist/index.mjs     [22m[32m4.89 KB[39m
+[32mESM[39m [1mdist/index.mjs.map [22m[32m7.07 KB[39m
+[32mESM[39m ⚡️ Build success in 200ms
+DTS ⚡️ Build success in 666ms
+DTS dist/index.d.mts 684.00 B
+DTS dist/index.d.ts  684.00 B
